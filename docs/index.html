@@ -3,165 +3,231 @@
 <head>
 <meta charset="utf-8">
 <title>Course Master</title>
-<link rel="stylesheet" href="mdl/material.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+<link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+<header>
 
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-  <header class="mdl-layout__header">
-    <div class="mdl-layout__header-row">
-      <!-- Title -->
-      <span class="mdl-layout-title">3rd Year Science modules</span>
-      <!-- Add spacer, to align navigation to the right -->
-      <div class="mdl-layout-spacer"></div>
-      <!-- Navigation -->
-      <nav class="mdl-navigation">
-        <a class="mdl-navigation__link" href="">Computer Science</a>
-        <a class="mdl-navigation__link" href="">Computer Science with Management</a>
-		<a class="mdl-navigation__link" href="">KEATS</a>
-		<a class="mdl-navigation__link" href="">Timetable</a>
-      </nav>
-    </div>
-  </header>
-  <div class="mdl-layout__drawer">
-    <span class="mdl-layout-title">Change Course</span>
-    <nav class="mdl-navigation">
-		<a class="mdl-navigation__link" href="">Computer Science</a>
-        <a class="mdl-navigation__link" href="">Computer Science with Management</a>
-    </nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">King's College London</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Keats</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Timetable</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</header>
+
+<div class="head-space"></div>
+<main role="main">
+<article role="article">
+
+<div class="jumbotron">
+  <h1 class="display-3">Choose your module!</h1>
+  <p class="lead">This website allows you to choose 3rd year computer science modules at King's College London</p> <hr class="my-4">
+  <p>Select modules using the following buttons:</p>
+  <p class="lead">
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Add Computer Science module
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+	  <a class="dropdown-item" onClick="switchOn('6CCS3AMS')">6CCS3AMS - Agents and Multi-Agent Systems</a>
+	  <a class="dropdown-item" onClick="switchOn('6CCS3CIS')">6CCS3CIS - Cryptography and Information Security</a>
+	  <a class="dropdown-item" onClick="switchOn('6CCS3COV')">6CCS3COV - Computer Vision</a>
+	  <a class="dropdown-item" onClick="switchOn('6CCS3CFL')">6CCS3CFL - Compiler and Formal Languages</a>
+<a class="dropdown-item" onClick="switchOn('6CCS3HCI')">6CCS3HCI - Human-Computer Interaction
+</a>
+	  <a class="dropdown-item" onClick="switchOn('6CCS3VER')">6CCS3VER - Formal Verification
+	  </a>
+	  <a class="dropdown-item" onClick="switchOn('6CCS3WSN')">6CCS3WSN - Algorithms for the World Wide Web and Social Networks
+	  </a>
+	  <a class="dropdown-item" onClick="switchOn('6CCS3DSM')">6CCS3DSM - Distributed Systems
+	  </a>
+	  <a class="dropdown-item" onClick="switchOn('6CCS3COM')">6CCS3COM - Computational Models
+		</a>
+	<a class="dropdown-item" onClick="switchOn('6CCS3PRJ')">6CCS3PRJ - Individual Project
+		</a>
   </div>
 </div>
 
-<div class="head-space"></div>
-<main role="main" class="mdl-layout__content">
-<article role="article">
-	<aside role="complementary" class="sem1" id="module1">
-		<div class="mdl-card mdl-shadow--2dp">
-			<div class="mdl-card__title">
-				<h3 class="mdl-card__title-text">6CCS3AMS<br>Agents and Multi-Agent Systems</h3>
-			</div>
-			<div class="mdl-card__supporting-text">
-				<p>Dr Elizabeth Black, Professor Michael Luck<br>
-				Credit : 15</p>
-			</div>
-			<div class="mdl-card__actions mdl-card--border">
-				<p>This module provides a critical introduction to theories and methods regarding multi-agent computer systems and their component agents, focussing particularly on mechanisms for coordination and agreement between self-interested agents.</p>
-			</div>
-			<div class="mdl-card__menu">
-				<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-					<i class="material-icons">remove_circle_outline</i>
-				</button>
-			</div>
-	</aside>
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+Add Management module
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+	  <a class="dropdown-item" onClick="switchOn('6SSMN339')">6SSMN339 - Human Resource Management</a>
+	  <a class="dropdown-item" onClick="switchOn('6SSMN325')">6SSMN325 - Business Strategy</a>
 
-	<aside role="complementary" class="sem1">
-		<div class="mdl-card mdl-shadow--2dp">
-			<div class="mdl-card__title">
-				<h3 class="mdl-card__title-text">6CCS3AMS<br>Agents and Multi-Agent Systems</h3>
-			</div>
-			<div class="mdl-card__supporting-text">
-				<p>Dr Elizabeth Black, Professor Michael Luck<br>
-				Credit : 15</p>
-			</div>
-			<div class="mdl-card__actions mdl-card--border">
-				<p>This module provides a critical introduction to theories and methods regarding multi-agent computer systems and their component agents, focussing particularly on mechanisms for coordination and agreement between self-interested agents.</p>
-			</div>
-			<div class="mdl-card__menu">
-				<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-					<i class="material-icons">remove_circle_outline</i>
-				</button>
-			</div>
-	</aside>
+  </div>
+</div>
+ </p>
+</div>
 
-	<aside role="complementary" class="sem1">
-		<div class="mdl-card mdl-shadow--2dp">
-			<div class="mdl-card__title">
-				<h3 class="mdl-card__title-text">6CCS3AMS<br>Agents and Multi-Agent Systems</h3>
-			</div>
-			<div class="mdl-card__supporting-text">
-				<p>Dr Elizabeth Black, Professor Michael Luck<br>
-				Credit : 15</p>
-			</div>
-			<div class="mdl-card__actions mdl-card--border">
-				<p>This module provides a critical introduction to theories and methods regarding multi-agent computer systems and their component agents, focussing particularly on mechanisms for coordination and agreement between self-interested agents.</p>
-			</div>
-			<div class="mdl-card__menu">
-				<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-					<i class="material-icons">remove_circle_outline</i>
-				</button>
-			</div>
-	</aside>
 
-	<aside role="complementary" class="sem1">
-		<div class="mdl-card mdl-shadow--2dp">
-			<div class="mdl-card__title">
-				<h3 class="mdl-card__title-text">6CCS3AMS<br>Agents and Multi-Agent Systems</h3>
-			</div>
-			<div class="mdl-card__supporting-text">
-				<p>Dr Elizabeth Black, Professor Michael Luck<br>
-				Credit : 15</p>
-			</div>
-			<div class="mdl-card__actions mdl-card--border">
-				<p>This module provides a critical introduction to theories and methods regarding multi-agent computer systems and their component agents, focussing particularly on mechanisms for coordination and agreement between self-interested agents.</p>
-			</div>
-			<div class="mdl-card__menu">
-				<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-					<i class="material-icons">remove_circle_outline</i>
-				</button>
-			</div>
-	</aside>
+<div class="alert alert-primary" role="alert">
+  Please add your modules.
+</div>
 
-	<aside role="complementary" class="sem1">
-		<div class="mdl-card mdl-shadow--2dp">
-			<div class="mdl-card__title">
-				<h3 class="mdl-card__title-text">6CCS3AMS<br>Agents and Multi-Agent Systems</h3>
-			</div>
-			<div class="mdl-card__supporting-text">
-				<p>Dr Elizabeth Black, Professor Michael Luck<br>
-				Credit : 15</p>
-			</div>
-			<div class="mdl-card__actions mdl-card--border">
-				<p>This module provides a critical introduction to theories and methods regarding multi-agent computer systems and their component agents, focussing particularly on mechanisms for coordination and agreement between self-interested agents.</p>
-			</div>
-			<div class="mdl-card__menu">
-				<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-					<i class="material-icons">remove_circle_outline</i>
-				</button>
-			</div>
-	</aside>
+<div class="alert alert-danger" role="alert">
+	  You don't have enough Term 1 modules!
+</div>
+<div class="alert alert-danger" role="alert">
+	  You don't have enough Term 2 modules!
+</div>
 
-	<aside role="complementary" class="sem1">
-		<div class="mdl-card mdl-shadow--2dp">
-			<div class="mdl-card__title">
-				<h3 class="mdl-card__title-text">6CCS3AMS<br>Agents and Multi-Agent Systems</h3>
-			</div>
-			<div class="mdl-card__supporting-text">
-				<p>Dr Elizabeth Black, Professor Michael Luck<br>
-				Credit : 15</p>
-			</div>
-			<div class="mdl-card__actions mdl-card--border">
-				<p>This module provides a critical introduction to theories and methods regarding multi-agent computer systems and their component agents, focussing particularly on mechanisms for coordination and agreement between self-interested agents.</p>
-			</div>
-			<div class="mdl-card__menu">
-				<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-					<i class="material-icons">remove_circle_outline</i>
-				</button>
-			</div>
-	</aside>
-	</article>
+<div class="alert alert-warning" role="alert">
+	  You need to have 8 modules.
+</div>
+
+<div class="card" id="6CCS3AMS" style="width: 20rem;">
+  <div class="card-body">
+    <h4 class="card-title">6CCS3AMS<br>Agents and Multi-Agent Systems</h4>
+    <h6 class="card-subtitle mb-2 text-muted">Dr Elizabeth Black, Professor Michael Luck<br> Credit : 15</h6>
+    <p class="card-text">This module provides a critical introduction to theories and methods regarding multi-agent computer systems and their component agents, focussing particularly on mechanisms for coordination and agreement between self-interested agents.</p>
+  </div>
+	<button class="cardButton" onclick="switchOff('6CCS3AMS')">remove</button>
+</div>
+
+<div class="card" id="6CCS3CIS" style="width: 20rem;">
+  <div class="card-body">
+    <h4 class="card-title">6CCS3CIS<br>Cryptography and Information Security</h4>
+    <h6 class="card-subtitle mb-2 text-muted">Professor Luca Vigano<br> Credit : 15</h6>
+		<p class="card-text">This module contains several advanced mathematical techniques. For students who have a reasonable mathematical background, it should not be a problem. Explanations are given during the lectures/tutorials and examples are studied in detail. Nevertheless, an in-depth understanding of these techniques is required for the examination and personal work has to be anticipated.</p>
+  </div>
+	<button card="cardButton" onclick="switchOff('6CCS3CIS')">remove</button>
+</div>
+
+<div class="card" id="6CCS3COV" style="width: 20rem;">
+  <div class="card-body">
+    <h4 class="card-title">6CCS3COV<br>Computer Vision</h4>
+    <h6 class="card-subtitle mb-2 text-muted">Dr Michael Spratling<br>Credit : 15</h6>
+	<p class="card-text">Computer Vision is concerned with the automatic interpretation and analysis of images. The goal is to enable computers to understand visual information in a similar way to humans. Such an ability is fundamental for solving many problems in areas such as industrial inspection, medical image analysis, robot navigation, biometrics, surveillance and security. This module aims to provide a comprehensive introduction to the subject, covering the basic concepts, methodologies and tools of image analysis and interpretation. This module will also explore the biological visual system, which has solved the problem of vision far better than contemporary computer vision systems. This will highlight the limitations of computer vision and suggest approaches for building improved, biologically-inspired, vision systems.</p>
+  </div>
+	<button class="cardButton" onclick="switchOff('6CCS3COV')">remove</button>
+</div>
+
+<div class="card" id="6CCS3CFL" style="width: 20rem;">
+  <div class="card-body">
+	  <h4 class="card-title">6CCS3CFL<br>Compiler and Formal Languages</h4>
+    <h6 class="card-subtitle mb-2 text-muted">Dr Elizabeth Black, Professor Michael Luck<br>
+				Credit : 15</h6>
+    <p class="card-text">This module provides a critical introduction to theories and methods regarding multi-agent computer systems and their component agents, focussing particularly on mechanisms for coordination and agreement between self-interested agents.</p>
+  </div>
+ 	<button class="cardButton" onclick="switchOff('6CCS3CFL')">remove</button>
+</div>
+
+
+<div class="card" id="6CCS3HCI" style="width: 20rem;">
+  <div class="card-body">
+	  <h4 class="card-title">6CCS3HCI<br>Human-Computer Interaction</h4>
+    <h6 class="card-subtitle mb-2 text-muted">Dr Elizabeth Black, Professor Michael Luck<br>
+				Credit : 15</h6>
+    <p class="card-text">This module provides a critical introduction to theories and methods regarding multi-agent computer systems and their component agents, focussing particularly on mechanisms for coordination and agreement between self-interested agents.</p>
+  </div>
+ 	<button class="cardButton" onclick="switchOff('6CCS3HCI')">remove</button>
+</div>
+
+
+<div class="card" id="6CCS3VER" style="width: 20rem;">
+  <div class="card-body">
+	  <h4 class="card-title">6CCS3VER<br>Formal Verification</h4>
+    <h6 class="card-subtitle mb-2 text-muted">Dr Elizabeth Black, Professor Michael Luck<br>
+				Credit : 15</h6>
+    <p class="card-text">This module provides a critical introduction to theories and methods regarding multi-agent computer systems and their component agents, focussing particularly on mechanisms for coordination and agreement between self-interested agents.</p>
+  </div>
+ 	<button class="cardButton" onclick="switchOff('6CCS3VER')">remove</button>
+</div>
+
+<div class="card" id="6CCS3WSN" style="width: 20rem;">
+  <div class="card-body">
+	  <h4 class="card-title">6CCS3WSN<br>Algorithms for the World Wide Web and Social Networks</h4>
+    <h6 class="card-subtitle mb-2 text-muted">Dr Elizabeth Black, Professor Michael Luck<br>
+				Credit : 15</h6>
+    <p class="card-text">This module provides a critical introduction to theories and methods regarding multi-agent computer systems and their component agents, focussing particularly on mechanisms for coordination and agreement between self-interested agents.</p>
+  </div>
+ 	<button class="cardButton" onclick="switchOff('6CCS3WSN')">remove</button>
+</div>
+
+<div class="card" id="6CCS3DSM" style="width: 20rem;">
+  <div class="card-body">
+	  <h4 class="card-title">6CCS3DSM<br>Distributed Systems</h4>
+    <h6 class="card-subtitle mb-2 text-muted">Dr Elizabeth Black, Professor Michael Luck<br>
+				Credit : 15</h6>
+    <p class="card-text">This module provides a critical introduction to theories and methods regarding multi-agent computer systems and their component agents, focussing particularly on mechanisms for coordination and agreement between self-interested agents.</p>
+  </div>
+ 	<button class="cardButton" onclick="switchOff('6CCS3DSM')">remove</button>
+</div>
+
+<div class="card" id="6CCS3COM" style="width: 20rem;">
+  <div class="card-body">
+	  <h4 class="card-title">6CCS3COM - Computational Models</h4>
+    <h6 class="card-subtitle mb-2 text-muted">Dr Elizabeth Black, Professor Michael Luck<br>
+				Credit : 15</h6>
+    <p class="card-text">This module provides a critical introduction to theories and methods regarding multi-agent computer systems and their component agents, focussing particularly on mechanisms for coordination and agreement between self-interested agents.</p>
+  </div>
+ 	<button class="cardButton" onclick="switchOff('6CCS3COM')">remove</button>
+</div>
+
+<div class="card" id="6SSMN339" style="width: 20rem;">
+  <div class="card-body">
+	  <h4 class="card-title">6SSMN339<br>Human Resource Management</h4>
+    <h6 class="card-subtitle mb-2 text-muted">Dr Elizabeth Black, Professor Michael Luck<br>
+				Credit : 15</h6>
+    <p class="card-text">This module provides a critical introduction to theories and methods regarding multi-agent computer systems and their component agents, focussing particularly on mechanisms for coordination and agreement between self-interested agents.</p>
+  </div>
+ 	<button class="cardButton" onclick="switchOff('6SSMN339')">remove</button>
+</div>
+
+<div class="card" id="6SSMN325" style="width: 20rem;">
+  <div class="card-body">
+	  <h4 class="card-title">6SSMN325<br>Business Strategy</h4>
+    <h6 class="card-subtitle mb-2 text-muted">Dr Elizabeth Black, Professor Michael Luck<br> Credit : 15</h6>
+    <p class="card-text">This module provides a critical introduction to theories and methods regarding multi-agent computer systems and their component agents, focussing particularly on mechanisms for coordination and agreement between self-interested agents.</p>
+  </div>
+ 	<button onclick="switchOff('6SSMN325')">remove</button>
+</div>
+
+<div class="card" id="6CCS3PRJ" style="width: 20rem;">
+  <div class="card-body">
+	  <h4 class="card-title">6CCS3PRJ<br>Individual Project</h4>
+    <h6 class="card-subtitle mb-2 text-muted">Dr Elizabeth Black, Professor Michael Luck<br>
+				Credit : 15</h6>
+    <p class="card-text">This module provides a critical introduction to theories and methods regarding multi-agent computer systems and their component agents, focussing particularly on mechanisms for coordination and agreement between self-interested agents.</p>
+  </div>
+ 	<button onclick="switchOff('6CCS3PRJ')">remove</button>
+</div>
+
+
+</article>
 </main>
 </body>
-<div class="footer-space"></div>
-	<footer class="mdl-mini-footer">
-	  <div class="mdl-mini-footer__left-section">
-		<div class="mdl-logo">1337 Secret Group</div>
-		<ul class="mdl-mini-footer__link-list">
-		  <li><a href="#">TOP</a></li>
-		</ul>
-	  </div>
-	</footer>
+<footer> 
+   <div class="content-wrap">
+		<h2> Contact info </h2>
+		<div class="contact-info">
+		<a href="mailto:wonjoon.ad@gmail.com">wonjoon.ad@gmail.com</a>
+		<a href="https://github.com/wonjoonSeol">GitHub</a>
+		<a href="https://www.linkedin.com/in/wonjoonseol/">LinkedIn</a>
+		</div>
+		<p>Copyright 2017 by Wonjoon Seol</p>
+	<div class="content-wrap">
+</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
-<script src="mdl/material.min.js"></script>
+<script src="./scripts/javascripts.js"></script>
 </html>
