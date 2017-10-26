@@ -44,21 +44,21 @@
 Add Computer Science module
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-	  <a class="dropdown-item" onClick="switchOn('6CCS3AMS')">6CCS3AMS - Agents and Multi-Agent Systems</a>
-	  <a class="dropdown-item" onClick="switchOn('6CCS3CIS')">6CCS3CIS - Cryptography and Information Security</a>
-	  <a class="dropdown-item" onClick="switchOn('6CCS3COV')">6CCS3COV - Computer Vision</a>
-	  <a class="dropdown-item" onClick="switchOn('6CCS3CFL')">6CCS3CFL - Compiler and Formal Languages</a>
-<a class="dropdown-item" onClick="switchOn('6CCS3HCI')">6CCS3HCI - Human-Computer Interaction
+	  <a class="dropdown-item" onClick="switchOn('6CCS3AMS', 1)">6CCS3AMS - Agents and Multi-Agent Systems</a>
+	  <a class="dropdown-item" onClick="switchOn('6CCS3CIS', 1)">6CCS3CIS - Cryptography and Information Security</a>
+	  <a class="dropdown-item" onClick="switchOn('6CCS3COV', 1)">6CCS3COV - Computer Vision</a>
+	  <a class="dropdown-item" onClick="switchOn('6CCS3CFL', 1)">6CCS3CFL - Compiler and Formal Languages</a>
+<a class="dropdown-item" onClick="switchOn('6CCS3HCI', 1)">6CCS3HCI - Human-Computer Interaction
 </a>
-	  <a class="dropdown-item" onClick="switchOn('6CCS3VER')">6CCS3VER - Formal Verification
+	  <a class="dropdown-item" onClick="switchOn('6CCS3VER', 1)">6CCS3VER - Formal Verification
 	  </a>
-	  <a class="dropdown-item" onClick="switchOn('6CCS3WSN')">6CCS3WSN - Algorithms for the World Wide Web and Social Networks
+	  <a class="dropdown-item" onClick="switchOn('6CCS3WSN', 1)">6CCS3WSN - Algorithms for the World Wide Web and Social Networks
 	  </a>
-	  <a class="dropdown-item" onClick="switchOn('6CCS3DSM')">6CCS3DSM - Distributed Systems
+	  <a class="dropdown-item" onClick="switchOn('6CCS3DSM', 2)">6CCS3DSM - Distributed Systems
 	  </a>
-	  <a class="dropdown-item" onClick="switchOn('6CCS3COM')">6CCS3COM - Computational Models
+	  <a class="dropdown-item" onClick="switchOn('6CCS3COM', 2)">6CCS3COM - Computational Models
 		</a>
-	<a class="dropdown-item" onClick="switchOn('6CCS3PRJ')">6CCS3PRJ - Individual Project
+	<a class="dropdown-item" onClick="switchOn('6CCS3PRJ', 2)">6CCS3PRJ - Individual Project
 		</a>
   </div>
 </div>
@@ -68,8 +68,8 @@ Add Computer Science module
 Add Management module
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-	  <a class="dropdown-item" onClick="switchOn('6SSMN339')">6SSMN339 - Human Resource Management</a>
-	  <a class="dropdown-item" onClick="switchOn('6SSMN325')">6SSMN325 - Business Strategy</a>
+	  <a class="dropdown-item" onClick="switchOn('6SSMN339', 1)">6SSMN339 - Human Resource Management</a>
+	  <a class="dropdown-item" onClick="switchOn('6SSMN325', 2)">6SSMN325 - Business Strategy</a>
 
   </div>
 </div>
@@ -77,18 +77,18 @@ Add Management module
 </div>
 
 
-<div class="alert alert-primary" role="alert">
-  Please add your modules.
+<div class="alert alert-primary" id="moduleWarning" role="alert">
+  You have successfully added necessary modules for this year.
 </div>
 
-<div class="alert alert-danger" role="alert">
+<div class="alert alert-danger" id="term1Alert" role="alert">
 	  You don't have enough Term 1 modules!
 </div>
-<div class="alert alert-danger" role="alert">
+<div class="alert alert-danger" id="term2Alert" role="alert">
 	  You don't have enough Term 2 modules!
 </div>
 
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-warning" id="8modules" role="alert">
 	  You need to have 8 modules.
 </div>
 
@@ -98,7 +98,7 @@ Add Management module
     <h6 class="card-subtitle mb-2 text-muted">Dr Elizabeth Black, Professor Michael Luck<br> Credit : 15</h6>
     <p class="card-text">This module provides a critical introduction to theories and methods regarding multi-agent computer systems and their component agents, focussing particularly on mechanisms for coordination and agreement between self-interested agents.</p>
   </div>
-	<button class="cardButton" onclick="switchOff('6CCS3AMS')">remove</button>
+	<button class="cardButton" onclick="switchOff('6CCS3AMS', 1)">remove</button>
 </div>
 
 <div class="card" id="6CCS3CIS" style="width: 20rem;">
@@ -107,7 +107,7 @@ Add Management module
     <h6 class="card-subtitle mb-2 text-muted">Professor Luca Vigano<br> Credit : 15</h6>
 		<p class="card-text">This module contains several advanced mathematical techniques. For students who have a reasonable mathematical background, it should not be a problem. Explanations are given during the lectures/tutorials and examples are studied in detail. Nevertheless, an in-depth understanding of these techniques is required for the examination and personal work has to be anticipated.</p>
   </div>
-	<button card="cardButton" onclick="switchOff('6CCS3CIS')">remove</button>
+	<button card="cardButton" onclick="switchOff('6CCS3CIS', 1)">remove</button>
 </div>
 
 <div class="card" id="6CCS3COV" style="width: 20rem;">
@@ -116,7 +116,7 @@ Add Management module
     <h6 class="card-subtitle mb-2 text-muted">Dr Michael Spratling<br>Credit : 15</h6>
 	<p class="card-text">Computer Vision is concerned with the automatic interpretation and analysis of images. The goal is to enable computers to understand visual information in a similar way to humans. Such an ability is fundamental for solving many problems in areas such as industrial inspection, medical image analysis, robot navigation, biometrics, surveillance and security. This module aims to provide a comprehensive introduction to the subject, covering the basic concepts, methodologies and tools of image analysis and interpretation. This module will also explore the biological visual system, which has solved the problem of vision far better than contemporary computer vision systems. This will highlight the limitations of computer vision and suggest approaches for building improved, biologically-inspired, vision systems.</p>
   </div>
-	<button class="cardButton" onclick="switchOff('6CCS3COV')">remove</button>
+	<button class="cardButton" onclick="switchOff('6CCS3COV', 1)">remove</button>
 </div>
 
 <div class="card" id="6CCS3CFL" style="width: 20rem;">
@@ -126,7 +126,7 @@ Add Management module
 				Credit : 15</h6>
     <p class="card-text">This module provides a critical introduction to theories and methods regarding multi-agent computer systems and their component agents, focussing particularly on mechanisms for coordination and agreement between self-interested agents.</p>
   </div>
- 	<button class="cardButton" onclick="switchOff('6CCS3CFL')">remove</button>
+ 	<button class="cardButton" onclick="switchOff('6CCS3CFL', 1)">remove</button>
 </div>
 
 
@@ -137,7 +137,7 @@ Add Management module
 				Credit : 15</h6>
     <p class="card-text">This module provides a critical introduction to theories and methods regarding multi-agent computer systems and their component agents, focussing particularly on mechanisms for coordination and agreement between self-interested agents.</p>
   </div>
- 	<button class="cardButton" onclick="switchOff('6CCS3HCI')">remove</button>
+ 	<button class="cardButton" onclick="switchOff('6CCS3HCI', 1)">remove</button>
 </div>
 
 
@@ -148,7 +148,7 @@ Add Management module
 				Credit : 15</h6>
     <p class="card-text">This module provides a critical introduction to theories and methods regarding multi-agent computer systems and their component agents, focussing particularly on mechanisms for coordination and agreement between self-interested agents.</p>
   </div>
- 	<button class="cardButton" onclick="switchOff('6CCS3VER')">remove</button>
+ 	<button class="cardButton" onclick="switchOff('6CCS3VER', 1)">remove</button>
 </div>
 
 <div class="card" id="6CCS3WSN" style="width: 20rem;">
@@ -158,7 +158,7 @@ Add Management module
 				Credit : 15</h6>
     <p class="card-text">This module provides a critical introduction to theories and methods regarding multi-agent computer systems and their component agents, focussing particularly on mechanisms for coordination and agreement between self-interested agents.</p>
   </div>
- 	<button class="cardButton" onclick="switchOff('6CCS3WSN')">remove</button>
+ 	<button class="cardButton" onclick="switchOff('6CCS3WSN', 1)">remove</button>
 </div>
 
 <div class="card" id="6CCS3DSM" style="width: 20rem;">
@@ -168,7 +168,7 @@ Add Management module
 				Credit : 15</h6>
     <p class="card-text">This module provides a critical introduction to theories and methods regarding multi-agent computer systems and their component agents, focussing particularly on mechanisms for coordination and agreement between self-interested agents.</p>
   </div>
- 	<button class="cardButton" onclick="switchOff('6CCS3DSM')">remove</button>
+ 	<button class="cardButton" onclick="switchOff('6CCS3DSM', 2)">remove</button>
 </div>
 
 <div class="card" id="6CCS3COM" style="width: 20rem;">
@@ -178,7 +178,7 @@ Add Management module
 				Credit : 15</h6>
     <p class="card-text">This module provides a critical introduction to theories and methods regarding multi-agent computer systems and their component agents, focussing particularly on mechanisms for coordination and agreement between self-interested agents.</p>
   </div>
- 	<button class="cardButton" onclick="switchOff('6CCS3COM')">remove</button>
+ 	<button class="cardButton" onclick="switchOff('6CCS3COM', 2)">remove</button>
 </div>
 
 <div class="card" id="6SSMN339" style="width: 20rem;">
@@ -188,7 +188,7 @@ Add Management module
 				Credit : 15</h6>
     <p class="card-text">This module provides a critical introduction to theories and methods regarding multi-agent computer systems and their component agents, focussing particularly on mechanisms for coordination and agreement between self-interested agents.</p>
   </div>
- 	<button class="cardButton" onclick="switchOff('6SSMN339')">remove</button>
+ 	<button class="cardButton" onclick="switchOff('6SSMN339', 1)">remove</button>
 </div>
 
 <div class="card" id="6SSMN325" style="width: 20rem;">
@@ -197,7 +197,7 @@ Add Management module
     <h6 class="card-subtitle mb-2 text-muted">Dr Elizabeth Black, Professor Michael Luck<br> Credit : 15</h6>
     <p class="card-text">This module provides a critical introduction to theories and methods regarding multi-agent computer systems and their component agents, focussing particularly on mechanisms for coordination and agreement between self-interested agents.</p>
   </div>
- 	<button onclick="switchOff('6SSMN325')">remove</button>
+ 	<button onclick="switchOff('6SSMN325', 2)">remove</button>
 </div>
 
 <div class="card" id="6CCS3PRJ" style="width: 20rem;">
@@ -207,7 +207,7 @@ Add Management module
 				Credit : 15</h6>
     <p class="card-text">This module provides a critical introduction to theories and methods regarding multi-agent computer systems and their component agents, focussing particularly on mechanisms for coordination and agreement between self-interested agents.</p>
   </div>
- 	<button onclick="switchOff('6CCS3PRJ')">remove</button>
+ 	<button onclick="switchOff('6CCS3PRJ', 2)">remove</button>
 </div>
 
 

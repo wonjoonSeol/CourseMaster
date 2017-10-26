@@ -11,6 +11,10 @@ h1, h2 {
 	display: inline-block;
 }
 
+#moduleWarning {
+	display: none;
+}
+
 .card {
 	display: none;
 	margin-left : auto;
