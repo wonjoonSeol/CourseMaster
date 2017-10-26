@@ -48,10 +48,10 @@ function issueWarning() {
 	}
 
 	y = document.getElementById('8modules');
-	if (term1 + term2 < 8) {
-		y.style.display = "block";
-	} else {
+	if (term1 + term2 == 8 ) {
 		y.style.display = 'none';
+	} else {
+		y.style.display = 'block';
 	}
 
 	y = document.getElementById('moduleWarning');
