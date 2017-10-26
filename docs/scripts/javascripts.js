@@ -8,7 +8,6 @@ function switchOn(id, term) {
 		if (term == 1) {
 			term1 += 1;
 			issueWarning();
-			alert(term1);
 		} else if (term == 2) {
 			term2 += 1;
 			issueWarning();
